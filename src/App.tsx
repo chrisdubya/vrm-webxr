@@ -1,13 +1,11 @@
-import React, { Suspense } from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { OrbitControls, useGLTF } from "@react-three/drei";
+import { Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
 import { Avatar } from "./Avatar";
 
 function App() {
 	return (
-		<div className='App'>
+		<div className='h-screen'>
 			<Canvas>
 				<OrbitControls />
 				<spotLight position={[0, 2, -1]} intensity={0.4} />
