@@ -46,13 +46,13 @@ export const Avatar = () => {
 		}
 
 		if (bones.leftShoulder) {
-			bones.leftShoulder.position.y = leftShoulder;
+			bones.leftShoulder.rotation.y = leftShoulder;
 		}
 
 		if (bones.rightShoulder) {
-			bones.rightShoulder.rotation.z = rightShoulder;
+			bones.rightShoulder.rotation.y = rightShoulder;
 		}
 	});
 
-	return <primitive object={gltf.scene}></primitive>;
+	return <primitive object={gltf.scene} position={[0, -1, 0]}></primitive>;
 };
