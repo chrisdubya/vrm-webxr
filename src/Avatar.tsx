@@ -23,7 +23,7 @@ export const Avatar = () => {
 			VRMUtils.removeUnnecessaryJoints(gltf.scene);
 			VRMUtils.rotateVRM0(vrm);
 			vrm.lookAt.target = camera;
-			console.log(vrm);
+
 			const bones = {
 				neck: vrm.humanoid.getRawBoneNode("neck"),
 				hips: vrm.humanoid.getRawBoneNode("hips"),
@@ -54,5 +54,5 @@ export const Avatar = () => {
 		}
 	});
 
-	return <primitive object={gltf.scene} position={[0, 0, -2]}></primitive>;
+	return <primitive object={gltf.scene} position={[0, 0, 0]}></primitive>;
 };
