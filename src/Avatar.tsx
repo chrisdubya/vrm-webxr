@@ -23,12 +23,12 @@ export const Avatar = () => {
 			VRMUtils.removeUnnecessaryJoints(gltf.scene);
 			VRMUtils.rotateVRM0(vrm);
 			vrm.lookAt.target = camera;
-
+			console.log(vrm);
 			const bones = {
-				neck: vrm.humanoid.getBoneNode("neck"),
-				hips: vrm.humanoid.getBoneNode("hips"),
-				leftShoulder: vrm.humanoid.getBoneNode("leftShoulder"),
-				rightShoulder: vrm.humanoid.getBoneNode("rightShoulder"),
+				neck: vrm.humanoid.getRawBoneNode("neck"),
+				hips: vrm.humanoid.getRawBoneNode("hips"),
+				leftShoulder: vrm.humanoid.getRawBoneNode("leftShoulder"),
+				rightShoulder: vrm.humanoid.getRawBoneNode("rightShoulder"),
 			};
 
 			setBones(bones);
@@ -54,5 +54,5 @@ export const Avatar = () => {
 		}
 	});
 
-	return <primitive object={gltf.scene} position={[0, -1, 0]}></primitive>;
+	return <primitive object={gltf.scene} position={[0, 0, -2]}></primitive>;
 };
